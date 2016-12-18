@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.HomeViewController">
+    <children>
+        <Label text="Convert Images">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+      <TableView fx:id="tableOfImages" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="deleteColumn" prefWidth="75.0" text="Delete" />
+          <TableColumn fx:id="imageNameColumn" maxWidth="1.7976931348623157E308" prefWidth="524.0" text="Image Name" />
+        </columns>
+      </TableView>
+      <VBox alignment="CENTER" spacing="5.0">
+         <children>
+            <Label text="Choose which dimention to want to change" />
+            <HBox alignment="CENTER" prefWidth="200.0" spacing="5.0">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <children>
+                  <CheckBox fx:id="widthCheckbox" mnemonicParsing="false" onAction="#widthCheckboxChecked" text="Width" />
+                  <TextField fx:id="newWidthInput" visible="false" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="200.0" spacing="5.0">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <children>
+                  <CheckBox fx:id="heightCheckbox" mnemonicParsing="false" onAction="#heightCheckboxChecked" text="Height" />
+                  <TextField fx:id="newHeightInput" visible="false" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefWidth="200.0" spacing="15.0" VBox.vgrow="NEVER">
+         <children>
+              <Button fx:id="chooseFilesBttn" mnemonicParsing="false" onAction="#chooseFiles" text="Chose images" />
+              <Button fx:id="convertBttn" mnemonicParsing="false" onAction="#convert" text="Convert" />
+              <Label fx:id="messageToUser" />
+         </children>
+      </HBox>
+    </children>
+   <opaqueInsets>
+      <Insets left="10.0" right="10.0" />
+   </opaqueInsets>
+</VBox>
