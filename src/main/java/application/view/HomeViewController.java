@@ -176,6 +176,8 @@ public class HomeViewController extends ViewController{
             heightCheckboxChecked();
             widthCheckbox.setSelected(false);
             widthCheckboxChecked();
+            newWidthInput.setText("");
+            newHeightInput.setText("");
 
             showUserMessage("Conversion completed!");
         }
